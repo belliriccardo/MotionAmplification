@@ -12,7 +12,7 @@ def save_numpy_to_mp4(output_path, frames, fps):
     """
     
     # Create a VideoWriter object
-    fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+    fourcc = cv2.VideoWriter.fourcc(*"mp4v")
     height, width = frames.shape[1], frames.shape[2]
     video = cv2.VideoWriter(output_path, fourcc, fps, (width, height))
 
